@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="right">
+
+        <ImageButton
+            android:id="@+id/btnTitle_UnAe"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:background="#FFFFFF"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/title_horizontal_unae" />
+
+        <ImageButton
+            android:id="@+id/btnSettings"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="180dp"
+            android:background="#FFFFFF"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_baseline_settings_24" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/maintitle"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/googleads" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/danwon1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="선사시대 ~ 고조선시대"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/danwon2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="삼국시대 ~ 남북국시대"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/danwon3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="고려시대"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/danwon4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="조선시대"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/danwon5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="개항기"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/danwon6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="일제강점기"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/danwon7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="광복 ~ 현대"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+
