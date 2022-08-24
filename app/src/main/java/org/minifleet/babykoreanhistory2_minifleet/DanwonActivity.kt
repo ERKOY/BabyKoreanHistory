@@ -21,6 +21,7 @@ class DanwonActivity : AppCompatActivity() {
             val intent = Intent(this, QuizActivity::class.java)
             startActivity(intent)
         }
+
         binding.danwon2.setOnClickListener {
             val intent = Intent(this, QuizActivity::class.java)
             startActivity(intent)

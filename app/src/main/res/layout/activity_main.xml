@@ -1,53 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="top">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/maintitle"
-        android:layout_width="400dp"
-        android:layout_height="400dp"
-        app:srcCompat="@drawable/title_unae" />
+    <data>
+        <variable
+            name="mainViewModel"
+            type="org.minifleet.babykoreanhistory2_minifleet.viewmodel.MainViewModel" />
+    </data>
 
-    <Button
-        android:id="@+id/btnDanwon"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="단원별 기출문제"
-        android:textStyle="bold"
-        android:textSize="30dp"/>
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnHoicha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="회차별 기출문제"
-        android:textStyle="bold"
-        android:textSize="30dp"/>
+        <ImageView
+            android:id="@+id/maintitle"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/title_unae" />
 
-    <Button
-        android:id="@+id/btnGaeneum"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="개념노트"
-        android:textStyle="bold"
-        android:textSize="30dp"/>
+        <Button
+            android:id="@+id/btnHoicha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="회차별 기출문제"
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btnDonate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="광고보고 후원하기"
-        android:textStyle="bold"
-        android:textSize="30dp"/>
+        <Button
+            android:id="@+id/btnGaeneum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="개념노트"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnDonate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="광고보고 후원하기"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnDanwon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="단원별 기출문제"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:text="@{String.valueOf(mainViewModel.count)}"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:text="@{mainViewModel.ttt}"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="down"
+                android:onClick="@{() -> mainViewModel.decrease()}"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="up"
+                android:onClick="@{() -> mainViewModel.increase()}"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="setName"
+                android:onClick="@{() -> mainViewModel.setName()}"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="setName2"
+                android:onClick="@{() -> mainViewModel.setName2()}"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
 
 
-
-
-</LinearLayout>
+</layout>
 
 
 

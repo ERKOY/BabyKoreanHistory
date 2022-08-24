@@ -1,17 +1,26 @@
 package org.minifleet.babykoreanhistory2_minifleet
 
 import android.content.Intent
+import android.database.sqlite.SQLiteOpenHelper
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
+import androidx.databinding.DataBindingUtil
 import org.minifleet.babykoreanhistory2_minifleet.databinding.ActivityMainBinding
+import org.minifleet.babykoreanhistory2_minifleet.viewmodel.MainViewModel
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+
+    private lateinit var binding: ActivityMainBinding
+    private val model: MainViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
+
+        binding.lifecycleOwner = this
+        binding.mainViewModel = model
 
         binding.btnDanwon.setOnClickListener {
             val intent = Intent(this, DanwonActivity::class.java)

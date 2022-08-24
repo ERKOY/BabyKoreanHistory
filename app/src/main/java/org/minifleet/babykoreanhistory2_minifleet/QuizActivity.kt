@@ -6,7 +6,9 @@ import android.os.Bundle
 import org.minifleet.babykoreanhistory2_minifleet.databinding.ActivityQuizBinding
 
 class QuizActivity : AppCompatActivity() {
+
     lateinit var binding: ActivityQuizBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityQuizBinding.inflate(layoutInflater)
